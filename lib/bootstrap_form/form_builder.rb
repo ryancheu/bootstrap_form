@@ -68,7 +68,7 @@ module BootstrapForm
     def control_group(name = nil, options = {}, &block)
       errors_has_name = object.respond_to?(:errors) && !(name.nil? || object.errors[name].empty?)
 
-      options[:class] ||= 'control-group'
+      options[:class] ||= 'form-group'
       options[:class] << ' error' if errors_has_name
 
       label = options.delete(:label)
